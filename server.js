@@ -142,9 +142,9 @@ function updateEmployee() {
             name: "newEmpRole",
             message: "Select new role for employee"
         }
-    ]).then(function (res) {
-        const updateEmpRole = res.updateEmpRole;
-        const newEmpRole = res.newEmpRole;
+    ]).then(function (answer) {
+        const updateEmpRole = answer.updateEmpRole;
+        const newEmpRole = answer.newEmpRole;
         const updateQuery = `UPDATE employee SET role_id = "${newEmpRole}" WHERE id = "${updateEmpRole}"`;
         db.query(updateQuery, function (err,res) {
             if (err) throw err;
@@ -159,7 +159,7 @@ function viewRoles () {
     var query = `SELECT * FROM role`;
     db.query(query, function (err, res) {
         if (err) throw err;
-        console.table("All Roles:", res);
+        console.table(res);
         startPrompt();
     });
 };
@@ -199,7 +199,7 @@ function viewDepartments () {
     var query = `SELECT * FROM department`;
     db.query(query, function (err, res) {
         if (err) throw err;
-        console.table("All Departments:", res);
+        console.table(res);
         startPrompt();
     });
 };
