@@ -36,6 +36,7 @@ db.connect((err) => {
     startPrompt();
 });
 
+
 // Starts prompt
 const startPrompt = () => {
     inquirer.prompt ([
@@ -49,7 +50,7 @@ const startPrompt = () => {
             "Update Employee Role",
             "View All Roles",
             "Add Role",
-            "View All Deparments",
+            "View All Departments",
             "Add Department",
             "Exit"]
         }
