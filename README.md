@@ -45,7 +45,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 To run the application, please install necessary npm modules through the command line and enter your mySQL password into the server.js file. Once completed, enter "node server.js" to run the application and follow the prompts.
 
 # Video Walkthrough
-
+[Video WalkThrough](https://drive.google.com/file/d/1McWlURDOpxN3HD0Gcl3osY-sXVUkoy8g/view)
 
 # GitHub
 [GitHub Repo](https://github.com/ehliao/employee-tracker)

@@ -121,7 +121,7 @@ function addEmployees () {
         const lastName = answer.lastName;
         const roleId = answer.roleId;
         const managerId = answer.managerId;
-        const query = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ("${firstName}","${lastName}","${roleId}","${managerId}")`;
+        const query = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ("${firstName}","${lastName}",${roleId},${managerId})`;
         db.query(query, function (err, res) {
             if (err) throw err;
             console.log("Employee added");
@@ -214,7 +214,7 @@ function addDepartment () {
         }
     ]).then(function (answer) {
         const newDept = answer.newDept;
-        const query = `INSERT INTO department (department_name) VALUES ("${newDept}")`;
+        const query = `INSERT INTO department (name) VALUES ("${newDept}")`;
         db.query(query, function (err, res) {
             if (err) throw err;
             console.log("Department Added");
